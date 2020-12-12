@@ -15,7 +15,7 @@ public class Main {
             return;
         }
 
-        int pc_choice = (int)(Math.random() * ((args.length - 1) + 1) + 0);
+        int pc_choice = (int)(Math.random() * args.length);
         String generated_key = generateSafeToken();
         String hmac = generateHmac(generated_key, args[pc_choice]);
         System.out.println(hmac);
